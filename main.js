@@ -21,14 +21,19 @@ function toogleAnswer(event){
     const questionCard = event.currentTarget;
 
     const answer = questionCard.querySelector('.answer');
-    if(answer.classList.contains("open")){
-        answer.classList.remove("open")
+    const icon = questionCard.querySelector('.icon');
+    if(answer.classList.contains("open"))
+    {
+        answer.classList.remove("open");
+        icon.classList.remove("open")
     } else {
-        answer.classList.add("open")
+        answer.classList.add("open");
+        icon.classList.add("open");
     }
 }
 
 window.onload = function() {
+
     const questions = document.querySelector(".questions");
     const questionTemplate = document.querySelector("#question-cards");
 
